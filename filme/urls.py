@@ -16,6 +16,6 @@ urlpatterns = [
     path('editarperfil/<int:pk>', Paginaperfil.as_view() , name='editarperfil'),
     path('criarconta/', Criarconta.as_view() , name='criarconta'),
     path('mudarsenha/', auth_view.PasswordChangeView.as_view(template_name = 'editarperfil.html',
-                                                             sucess_url=reverse_lazy('filme:homefilmes')) , name='mudarsenha'),
+                                                             sucess_url=reverse_lazy('filme:homefilmes') , name='mudarsenha')),
 
 ]
