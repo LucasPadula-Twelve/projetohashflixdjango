@@ -32,7 +32,7 @@ else:
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["https://projetohashflixdjango-production-b66f.up.railway.app/" ]
+ALLOWED_HOSTS = ["https://projetohashflixdjango-production-b66f.up.railway.app/", 'projetohashflixdjango-production-b66f.up.railway.app' ]
 
 
 # Application definition
