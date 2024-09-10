@@ -20,13 +20,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=dybeil-wumnw+*q)9hecrur8!pi*^-38$948x759l9jteh&6v'
+TOKEN_CRSF = os.getenv('TOKEN_CRSF')
+if TOKEN_CRSF:
+    SECRET_KEY = TOKEN_CRSF
+    CSRF_TRUSTED_ORIGINS = ['https://projetohashflixdjango-production-b66f.up.railway.app/']
+else:
+    SECRET_KEY = 'django-insecure-=dybeil-wumnw+*q)9hecrur8!pi*^-38$948x759l9jteh&6v'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://projetohashflixdjango-production-b66f.up.railway.app/" , 'localhost' , '127.0 0.1']
 
 
 # Application definition
