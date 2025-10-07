@@ -36,5 +36,7 @@ class Episodio(models.Model):
 class Usuario(AbstractUser):
     filmes_vistos = models.ManyToManyField("Filme")
 
+class filme_usuario(models.Model):
+    filmes = models.CharField(max_length=100)
 
 # Create your models here.
